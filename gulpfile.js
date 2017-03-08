@@ -9,28 +9,28 @@ gulp.task('import-for-compile', function (){
     del.sync(['dist/**', '!dist']);
 
     gulp.src([
-        '../pehuinfo2/src/webserver/wwwroot/app/tpl/*.html'
+        '../aot-4-lazy/app/tpl/*.html'
     ])
         .pipe(gulp.dest('app/tpl'));
 
     gulp.src([
-        '../pehuinfo2/src/webserver/wwwroot/app/*.ts',
-        '!../pehuinfo2/src/webserver/wwwroot/app/boot.ts',
-        '../pehuinfo2/src/webserver/script-src/boot-aot.ts'
+        '../aot-4-lazy/app/*.ts',
+        '!../aot-4-lazy/app/boot.ts',
+        '../aot-4-lazy/script-aot-src/*.ts'
     ])
         .pipe(replace(/app\/tpl\//, 'tpl/'))
         .pipe(gulp.dest('app'));
 
-    gulp.src([
-        '../pehuinfo2/src/webserver/wwwroot/app/classes/*.ts'
+/*    gulp.src([
+        '../pehuinfo2/src/webserver/wwwroot/app/classes/!*.ts'
     ])
         .pipe(replace(/app\/tpl\//, '../tpl/'))
         .pipe(gulp.dest('app/classes'));
 
     gulp.src([
-        '../pehuinfo2/src/webserver/wwwroot/app/directives/*.ts'
+        '../pehuinfo2/src/webserver/wwwroot/app/directives/!*.ts'
     ])
-        .pipe(gulp.dest('app/directives'));
+        .pipe(gulp.dest('app/directives'));*/
 });
 
 gulp.task('default', ['import-for-compile']);
