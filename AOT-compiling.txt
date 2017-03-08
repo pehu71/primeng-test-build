@@ -1,0 +1,11 @@
+node_modules\.bin\ngc -p tsconfig-aot.json
+
+node_modules\.bin\rollup -c rollup.js
+
+run gulp on pehuinfo2 to copy resulting build-aot.js to proper folder
+
+
+
+optional source-map-explorer:
+
+node_modules\.bin\source-map-explorer dist/build-aot.js
