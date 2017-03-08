@@ -1,6 +1,12 @@
 {
   "name": "pehuinfo",
   "description": "pehu.info web server front-end part",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -28,10 +34,12 @@
     "@types/hammerjs": "^2.0.34",
     "@types/jquery": "^2.0.40",
     "@types/node": "^6.0.52",
+    "concurrently": "^3.4.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-replace": "^0.5.4",
     "gulp-util": "^3.0.8",
+    "lite-server": "^2.3.0",
     "rollup": "^0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-gulp": "^1.0.0",

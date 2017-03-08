@@ -18,7 +18,7 @@ gulp.task('import-for-compile', function (){
         '!../aot-4-lazy/app/boot.ts',
         '../aot-4-lazy/script-aot-src/*.ts'
     ])
-        .pipe(replace(/app\/tpl\//, 'tpl/'))
+        // .pipe(replace(/app\/tpl\//, 'tpl/'))
         .pipe(gulp.dest('app'));
 
 /*    gulp.src([

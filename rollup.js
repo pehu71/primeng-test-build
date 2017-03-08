@@ -4,7 +4,7 @@ var commonjs = require('rollup-plugin-commonjs');
 var uglify  = require('rollup-plugin-uglify');
 
 module.exports = {
-    entry: 'app/boot-aot.js',
+    entry: 'app/boot.js',
     dest: 'dist/build-aot.js',
     sourceMap: true,
     format: 'iife',
