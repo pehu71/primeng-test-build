@@ -11,12 +11,18 @@
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
 
+    <script>
+        System.config({
+            defaultJSExtensions: true
+        });
+    </script>
+
 </head>
 <!-- 3. Display the application -->
 <body>
 <my-app>Loading...</my-app>
 
-<script src="dist/build-aot.js"></script>
+<script src="dist/app.main.js"></script>
 
 </body>
 </html>
