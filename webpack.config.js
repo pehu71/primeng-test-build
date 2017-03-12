@@ -37,6 +37,7 @@ module.exports = {
             { test: /\.ts$/, loader: '@ngtools/webpack' }
         ]
     },
+    devtool: 'source-map',
     devServer: {
         historyApiFallback: true
     }

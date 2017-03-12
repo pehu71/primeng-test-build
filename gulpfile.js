@@ -9,14 +9,14 @@ gulp.task('import-for-compile', function (){
     del.sync(['dist/**', '!dist']);
 
     gulp.src([
-        '../aot-4-lazy/app/tpl/*.html'
+        '../primeng-test/app/tpl/*.html'
     ])
         .pipe(gulp.dest('app/tpl'));
 
     gulp.src([
-        '../aot-4-lazy/app/*.ts',
-        '!../aot-4-lazy/app/boot.ts',
-        '../aot-4-lazy/script-aot-src/*.ts'
+        '../primeng-test/app/*.ts',
+        '!../primeng-test/app/boot.ts',
+        '../primeng-test/script-aot-src/*.ts'
     ])
         // .pipe(replace(/app\/tpl\//, 'tpl/'))
         .pipe(gulp.dest('app'));
